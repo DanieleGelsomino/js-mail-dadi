@@ -11,14 +11,14 @@ console.log("JS OK!");
     Stabilire il vincitore, in base a chi fa il punteggio più alto.         
 */
 
-// Mail 
+// Mail
 const buttonLogin = document.querySelector(".login > button");
 buttonLogin.addEventListener("click", function () {
   const listEmail = [
     "danny.gelso@gmail.com",
     "daniele.gelsomino@gmail.com, daniele.gelso@icloud.com",
   ];
-  console.log('lista email valide: ' + listEmail);
+  console.log("lista email valide: " + listEmail);
 
   const imputLogin = document.querySelector(".login .email");
 
@@ -27,57 +27,56 @@ buttonLogin.addEventListener("click", function () {
   for (let i = 0; i < listEmail.length; i++) {
     if (emailValue === listEmail[i]) {
       alert("Accesso eseguito!");
-      console.log('email inserita: ' + emailValue)
+      console.log("email inserita: " + emailValue);
       break;
     } else {
       alert(
         "Accesso negato! Questo indirizzo email non è associato ad un utente registrato perciò non è valido. Inserisci un indirizzo email corretto"
       );
-      console.log('email inserita: ' + emailValue)
+      console.log("email inserita: " + emailValue);
       break;
     }
   }
 });
 
 // Gioco dei dadi
-const containerNumber = document.querySelector(".game");
 
-const player = Math.floor((Math.random() * 6) + 1);
-console.log(player);
 
-const com = Math.floor((Math.random() * 6) + 1);
-console.log(com);
 
-const buttonStart = document.getElementById('start-game');
+const buttonStart = document.getElementById("start-game");
 buttonStart.addEventListener("click", function () {
 
-if (player < com){
-    console.log('Hai Perso!');
+const containerNumber = document.querySelector(".game");
+
+const player = Math.floor(Math.random() * 6 + 1);
+console.log(player);
+
+const com = Math.floor(Math.random() * 6 + 1);
+console.log(com);
+
+  if (player < com) {
+    console.log("Hai Perso!");
     const playerNumber = `<div id="player" class="game">${player}</div>`;
     containerNumber.innerHTML += playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
-    alert('Hai Perso!');
+    alert("Hai Perso!");
     
-    
-    
-} else if (player === com) {
-    console.log('Pareggio!');
+  } else if (player === com) {
+    console.log("Pareggio!");
     const playerNumber = `<div id="player" class="game">${player}</div>`;
     containerNumber.innerHTML += playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
-    alert('Pareggio!');
+    alert("Pareggio!");
    
-
-} else {
-    console.log('Hai Vinto!');
+  } else {
+    console.log("Hai Vinto!");
     const playerNumber = `<div id="player" class="game">${player}</div>`;
     containerNumber.innerHTML += playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
-    alert('Hai Vinto!');    
+    alert("Hai Vinto!");
     
-} 
-
-})
+  }
+});
