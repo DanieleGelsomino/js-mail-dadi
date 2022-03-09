@@ -49,10 +49,10 @@ buttonStart.addEventListener("click", function () {
 const containerNumber = document.querySelector(".game");
 
 const player = Math.floor(Math.random() * 6 + 1);
-console.log(player);
+console.log("Player: " + player);
 
 const com = Math.floor(Math.random() * 6 + 1);
-console.log(com);
+console.log("COM: " + com);
 
   if (player < com) {
     console.log("Hai Perso!");

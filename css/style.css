@@ -10,18 +10,17 @@ body {
 }
 
 .container {
+max-width:1700px ;
   background-size: cover;
   background-position: center;
-  max-width: 1200px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
   background-color: teal;
 }
 
 h2 {
+  margin-top: 50px;
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -49,12 +48,26 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: lightskyblue;
+  color: antiquewhite;
+}
+
 .title-game {
   margin-top: 150px;
 }
 
+.descript-game {
+
+  margin-top:20px;
+  font-size: 1rem;
+}
+
 .game {
-  margin-top: 20px;
+  height: 100vh;
+  margin-top: 30px;
+  font-weight: 600;
   
 }
 
