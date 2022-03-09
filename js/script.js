@@ -57,7 +57,7 @@ console.log(com);
   if (player < com) {
     console.log("Hai Perso!");
     const playerNumber = `<div id="player" class="game">${player}</div>`;
-    containerNumber.innerHTML += playerNumber;
+    containerNumber.innerHTML = playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
     alert("Hai Perso!");
@@ -65,7 +65,7 @@ console.log(com);
   } else if (player === com) {
     console.log("Pareggio!");
     const playerNumber = `<div id="player" class="game">${player}</div>`;
-    containerNumber.innerHTML += playerNumber;
+    containerNumber.innerHTML = playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
     alert("Pareggio!");
@@ -73,7 +73,7 @@ console.log(com);
   } else {
     console.log("Hai Vinto!");
     const playerNumber = `<div id="player" class="game">${player}</div>`;
-    containerNumber.innerHTML += playerNumber;
+    containerNumber.innerHTML = playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
     alert("Hai Vinto!");
