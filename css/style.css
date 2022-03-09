@@ -19,13 +19,11 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
-  background-color: cadetblue;
 }
 
 h2 {
   font-size: 2rem;
   text-transform: uppercase;
-  
 }
 
 .login {
@@ -50,3 +48,4 @@ button {
   border-radius: 20px;
   border: none;
 }
+

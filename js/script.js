@@ -1,5 +1,5 @@
 // console check
-console.log('JS OK!')
+console.log("JS OK!");
 
 /*  consegna:
     Mail
@@ -11,26 +11,33 @@ console.log('JS OK!')
     Stabilire il vincitore, in base a chi fa il punteggio più alto.         
 */
 
-const buttonLogin = document.querySelector('.login > button');
-buttonLogin.addEventListener('click', function(){
+// Mail 
+const buttonLogin = document.querySelector(".login > button");
+buttonLogin.addEventListener("click", function () {
+  const listEmail = [
+    "danny.gelso@gmail.com",
+    "daniele.gelsomino@gmail.com, daniele.gelso@icloud.com",
+  ];
+  console.log('lista email valide: ' + listEmail);
 
-    const listEmail = ["danny.gelso@gmail.com", "daniele.gelsomino@gmail.com, daniele.gelso@icloud.com"];
+  const imputLogin = document.querySelector(".login .email");
 
-    const imputLogin = document.querySelector(".login .email");
+  const emailValue = imputLogin.value;
 
-    const emailValue = imputLogin.value;
-
-    for (let i = 0; i < listEmail.length; i++) {
-
-        if (emailValue === listEmail[i]) {
-            alert("Accesso eseguito!");
-            break;
-            
-        } else {
-            alert("Accesso negato! questo indirizzo email non è associato ad alcun utente perciò non è valido. Inserisci un indirizzo email corretto");
-            break;
-            
-        }
+  for (let i = 0; i < listEmail.length; i++) {
+    if (emailValue === listEmail[i]) {
+      alert("Accesso eseguito!");
+      console.log('email inserita: ' + emailValue)
+      break;
+    } else {
+      alert(
+        "Accesso negato! Questo indirizzo email non è associato ad un utente registrato perciò non è valido. Inserisci un indirizzo email corretto"
+      );
+      console.log('email inserita: ' + emailValue)
+      break;
     }
+  }
+});
 
-})
+// Gioco dei dadi
+
