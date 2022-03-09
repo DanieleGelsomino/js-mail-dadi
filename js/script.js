@@ -41,3 +41,18 @@ buttonLogin.addEventListener("click", function () {
 
 // Gioco dei dadi
 
+let player = Math.floor((Math.random() * 6) + 1);
+console.log(player);
+
+const containerNumber = document.querySelector(".game");
+
+const element = `<div id="playerone" class="game">${player}</div>`;
+containerNumber.innerHTML += element;
+
+let com = Math.floor((Math.random() * 6) + 1);
+console.log(com);
+
+
+
+
+
