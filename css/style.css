@@ -52,3 +52,9 @@ button {
 .title-game {
     margin-top: 150px;
 }
+
+#player,
+#computer {
+    font-size: 3rem;
+    border: 2px solid red;
+}

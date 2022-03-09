@@ -40,19 +40,38 @@ buttonLogin.addEventListener("click", function () {
 });
 
 // Gioco dei dadi
+const containerNumber = document.querySelector(".game");
 
-let player = Math.floor((Math.random() * 6) + 1);
+const player = Math.floor((Math.random() * 6) + 1);
 console.log(player);
 
-let com = Math.floor((Math.random() * 6) + 1);
+const com = Math.floor((Math.random() * 6) + 1);
 console.log(com);
 
 if (player < com){
     console.log('Hai Perso!');
+    const playerNumber = `<div id="player" class="game">${player}</div>`;
+    containerNumber.innerHTML += playerNumber;
+    const comNumber = `<div id="computer" class="game">${com}</div>`;
+    containerNumber.innerHTML += comNumber;
+    alert('Hai Perso!');
+    
+    
 } else if (player === com) {
     console.log('Pareggio!');
+    const playerNumber = `<div id="player" class="game">${player}</div>`;
+    containerNumber.innerHTML += playerNumber;
+    const comNumber = `<div id="computer" class="game">${com}</div>`;
+    containerNumber.innerHTML += comNumber;
+    alert('Pareggio!');
+
 } else {
     console.log('Hai Vinto!');
+    const playerNumber = `<div id="player" class="game">${player}</div>`;
+    containerNumber.innerHTML += playerNumber;
+    const comNumber = `<div id="computer" class="game">${com}</div>`;
+    containerNumber.innerHTML += comNumber;
+    alert('Hai Vinto!');
 }
 
 
