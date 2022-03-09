@@ -44,13 +44,16 @@ buttonLogin.addEventListener("click", function () {
 let player = Math.floor((Math.random() * 6) + 1);
 console.log(player);
 
-const containerNumber = document.querySelector(".game");
-
-const element = `<div id="playerone" class="game">${player}</div>`;
-containerNumber.innerHTML += element;
-
 let com = Math.floor((Math.random() * 6) + 1);
 console.log(com);
+
+if (player < com){
+    console.log('Hai Perso!');
+} else if (player === com) {
+    console.log('Pareggio!');
+} else {
+    console.log('Hai Vinto!');
+}
 
 
 
