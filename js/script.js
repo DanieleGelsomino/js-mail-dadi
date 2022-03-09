@@ -48,6 +48,9 @@ console.log(player);
 const com = Math.floor((Math.random() * 6) + 1);
 console.log(com);
 
+const buttonStart = document.getElementById('start-game');
+buttonStart.addEventListener("click", function () {
+
 if (player < com){
     console.log('Hai Perso!');
     const playerNumber = `<div id="player" class="game">${player}</div>`;
@@ -57,6 +60,7 @@ if (player < com){
     alert('Hai Perso!');
     
     
+    
 } else if (player === com) {
     console.log('Pareggio!');
     const playerNumber = `<div id="player" class="game">${player}</div>`;
@@ -64,6 +68,7 @@ if (player < com){
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
     alert('Pareggio!');
+   
 
 } else {
     console.log('Hai Vinto!');
@@ -71,10 +76,8 @@ if (player < com){
     containerNumber.innerHTML += playerNumber;
     const comNumber = `<div id="computer" class="game">${com}</div>`;
     containerNumber.innerHTML += comNumber;
-    alert('Hai Vinto!');
-}
+    alert('Hai Vinto!');    
+    
+} 
 
-
-
-
-
+})
